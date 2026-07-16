@@ -10,6 +10,9 @@ const deliveryCharge = 10
 // gateway initialize
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
+console.log("Key ID:", process.env.RAZORPAY_KEY_ID);
+console.log("Secret Loaded:", !!process.env.RAZORPAY_KEY_SECRET);
+
 const razorpayInstance = new razorpay({
     key_id : process.env.RAZORPAY_KEY_ID,
     key_secret : process.env.RAZORPAY_KEY_SECRET,
